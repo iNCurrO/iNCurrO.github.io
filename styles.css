@@ -105,6 +105,11 @@ h2 {
   font-size: clamp(2rem, 5vw, 4rem);
 }
 
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
 .intro {
   margin: 1.25rem 0 2rem;
   color: var(--muted);
@@ -135,6 +140,58 @@ h2 {
 .button-secondary:focus-visible {
   color: #fff;
   background: var(--accent);
+}
+
+.timeline {
+  display: grid;
+  gap: 0;
+  max-width: 58rem;
+  margin-top: 2rem;
+}
+
+.timeline-item,
+.content-card,
+.skill-groups > div {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-date {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.timeline-item p:last-child,
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+.content-grid,
+.skill-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 58rem;
+  margin-top: 2rem;
+}
+
+.content-card h3,
+.skill-groups h3 {
+  color: var(--accent);
+}
+
+.content-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.section-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .game-shell {
@@ -239,6 +296,7 @@ a:focus-visible {
   .hero {
     min-height: 60vh;
   }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
