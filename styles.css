@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -124,6 +125,102 @@ h2 {
   background: #214b41;
 }
 
+.button-secondary {
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  color: #fff;
+  background: var(--accent);
+}
+
+.game-shell {
+  max-width: 42rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e8ede8;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.game-toolbar,
+.game-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.game-toolbar {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.game-toolbar strong {
+  color: var(--ink);
+}
+
+#game-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  background: #17221f;
+  border: 4px solid #2f6558;
+  border-radius: 0.5rem;
+  image-rendering: pixelated;
+  touch-action: none;
+}
+
+.game-actions {
+  margin-top: 1rem;
+}
+
+.game-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.game-controls {
+  display: grid;
+  justify-items: center;
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.game-controls > div {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.game-controls button {
+  width: 3rem;
+  height: 3rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  touch-action: manipulation;
+}
+
+.game-controls button:hover,
+.game-controls button:focus-visible {
+  color: #fff;
+  background: var(--accent);
+}
+
+.game-help {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 a:focus-visible {
   outline: 3px solid #b7d6cb;
   outline-offset: 3px;
@@ -141,5 +238,35 @@ a:focus-visible {
 
   .hero {
     min-height: 60vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  .site-header,
+  main {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  nav {
+    gap: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .game-toolbar {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 90rem) {
+  .site-header,
+  main {
+    max-width: 80rem;
   }
 }

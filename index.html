@@ -12,10 +12,12 @@
     <header class="site-header">
       <a class="brand" href="#top">Gihun Kim</a>
       <nav aria-label="Primary navigation">
+        <a href="#top">Home</a>
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
         <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -42,7 +44,36 @@
       <section id="games" aria-labelledby="games-title">
         <p class="eyebrow">Play</p>
         <h2 id="games-title">Games</h2>
-        <p>The Bit-wise game space is prepared for a later development loop.</p>
+        <p>Guide the snake, collect food, and keep your score alive.</p>
+        <div class="game-shell" data-game="snake">
+          <div class="game-toolbar" aria-live="polite">
+            <span>Avoided <strong id="score">0</strong></span>
+            <span>High score <strong id="high-score">0</strong></span>
+            <span id="game-status">Ready</span>
+          </div>
+          <canvas id="game-board" width="480" height="480" aria-label="Snake game board"></canvas>
+          <div class="game-actions">
+            <button class="button" id="start-game" type="button">Start game</button>
+            <button class="button button-secondary" id="pause-game" type="button" disabled>Pause</button>
+            <button class="button button-secondary" id="restart-game" type="button">Restart</button>
+          </div>
+          <div class="game-controls" aria-label="Mobile direction controls">
+            <button type="button" data-direction="up" aria-label="Move up">↑</button>
+            <div>
+              <button type="button" data-direction="left" aria-label="Move left">←</button>
+              <button type="button" data-direction="down" aria-label="Move down">↓</button>
+              <button type="button" data-direction="right" aria-label="Move right">→</button>
+            </div>
+          </div>
+          <p class="game-help">Use arrow keys, WASD, mouse, or touch. Press P or Space to pause.</p>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow">Connect</p>
+        <h2 id="contact-title">Contact</h2>
+        <p>For professional inquiries, email Gihun Kim.</p>
+        <a class="button" href="mailto:rlarlgns0514@naver.com">Email Gihun Kim</a>
       </section>
     </main>
   </body>
